@@ -5,12 +5,17 @@ namespace ImdSolidPrinciples.Bad
     // This class does everything, and it does everything in one method.
     public class MailSender
     {
-
+        // passing in an object = removing a basic check ("is this a message that we get")
         public void SendMessage(object message)
         {
             try
             {
-                
+                // notice in the patterns cases underneath that we hardcode everything
+                //  - the kind of message
+                //  - the output to the user
+                //  - the validation
+
+                // this means that if the logic for pigeons change, we need to adjust this file.
                 switch (message)
                 { 
                     case OldSchoolMessage pm:

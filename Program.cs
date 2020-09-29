@@ -51,8 +51,6 @@ namespace ImdSolidPrinciples
                 // accepts whatever you throw at it
                 badSender.SendMessage(x);
             });
-
-            Console.ReadLine();
         }
     }
 }
